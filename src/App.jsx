@@ -12,14 +12,14 @@ function App() {
   return (
     <>
       <Sidebar />
-      <div className="absolute left-44  space-y-28">
-        <Section />
-        <About />
-        <Education />
+      <div className="absolute left-0  space-y-28 p-6">
+        <Section className="overflow-y-auto"/>
+        <About className="overflow-y-auto"/>
+        <Education className="overflow-y-auto"/>
 
-        <Tech />
+        <Tech className="overflow-y-auto"/>
 
-        <Projects />
+        <Projects className="overflow-y-auto"/>
       </div>
       <ScrollToTop color="#1e9e9c2" style={{backgroundColor:"blue"}}/>
     </>

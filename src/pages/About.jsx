@@ -1,7 +1,7 @@
 import MyImage from "../imgs/portImg.png";
 const About = () => {
   return (
-    <div className="edu w-screen h-76  sm:h-screen flex-col justify-center items-center sm:pl-80" id="about">
+    <div className="edu w-screen h-auto  sm:h-screen flex-col justify-center items-center sm:pl-80" id="about">
       <p className="education text-3xl flex justify-center items-center">
         About
       </p>
