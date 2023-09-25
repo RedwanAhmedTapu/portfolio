@@ -1,108 +1,134 @@
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-  } from "react-vertical-timeline-component";
-  import "react-vertical-timeline-component/style.min.css";
-  import { FaHtml5 } from "react-icons/fa";
-  import {FaCss3} from "react-icons/fa";
-  import {BiLogoJavascript,BiLogoReact,BiLogoTailwindCss} from "react-icons/bi";
-  import {IoLogoNodejs} from "react-icons/io";
-  import {SiExpress} from "react-icons/si";
+import "react-vertical-timeline-component/style.min.css";
+import { FaHtml5 } from "react-icons/fa";
+import {FaCss3} from "react-icons/fa";
+import {BiLogoJavascript,BiLogoReact,BiLogoTailwindCss,BiLogoMongodb} from "react-icons/bi";
+import {IoLogoNodejs} from "react-icons/io";
+import {SiExpress,SiMongoose} from "react-icons/si";
+import WebIcon from "../imgs/webIcon.svg";
+import Server from "../imgs/server.svg";
+import Others from "../imgs/others.svg"
 
 const Tech = () => {
   return (
     <>
-      <div className="w-screen h-screen flex-col justify-center items-center sm:pl-80" id="tech">
-        <p className="education text-3xl flex justify-center items-center">
-          Technologies That I Have Learnt
-        </p>
-        <div className="flex justify-center items-center">
-          <hr className="w-80 h-1  border-t border-gray-300 my-4"></hr>
+     <div
+        className="flex flex-col w-full h-screen max-[1100px]:h-[60rem] max-[900px]:h-[80rem] justify-center items-center gap-y-12 overflow-hidden  "
+        id="tech"
+      >
+         <div className="flex flex-col ">
+          <p className="education text-3xl flex justify-center items-center">
+            skills
+          </p>
+          <div className="flex justify-center items-center">
+            <hr className="w-80 h-1  border-t border-gray-300 my-4"></hr>
+          </div>
         </div>
-        <VerticalTimeline className="educationLine bg-cyan-900 p-6">
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "white" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2022(within 5 days)"
-            iconStyle={{ background: "#E04D01", color: "#fff" }}
-            icon={<FaHtml5 />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">HTML</h3>
-            
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "white" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2022(within 20 days)"
-            iconStyle={{ background: "#1363DF", color: "#fff" }}
-            icon={<FaCss3 />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">CSS</h3>
-            
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "white" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2022(within 1.5 months)"
-            iconStyle={{ background: "#FFF80A", color: "#fff" }}
-            icon={<BiLogoJavascript />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">
-              Javascript
-            </h3>
-          
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "white" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2022(within 30 days)"
-            iconStyle={{ background: "#00C4FF", color: "#fff" }}
-            icon={<BiLogoReact />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">REACT</h3>
-           
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "white" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2022(within 7 days)"
-            iconStyle={{ background: "#00C4FF", color: "#fff" }}
-            icon={<BiLogoTailwindCss />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">TAILWINDCSS</h3>
-           
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "white" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2022(within 1.5 months)"
-            iconStyle={{ background: "#17594A", color: "#fff" }}
-            icon={<IoLogoNodejs />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">NODEJS</h3>
-           
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "white" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2022(within 15 days)"
-            iconStyle={{ background: "#435B66", color: "#fff" }}
-            icon={<SiExpress />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">EXPRESSJS</h3>
-        
-          </VerticalTimelineElement>
-        </VerticalTimeline>
+      <div className=" w-full  flex max-[1100px]:flex-wrap  max-[1100px]:gap-y-12 justify-center items-center gap-x-4">
+
+        <div className="flex justify-center items-center w-[25rem] h-[20rem] bg-[#f4f0f0] shadow-xl shadow-slate-300 rounded-sm relative">
+          <img
+            src={WebIcon}
+            className="w-32 h-32 absolute -top-16 "
+          />
+          <div className="w-full h-[80%] flex flex-col justify-center items-center gap-y-2">
+
+            <div className="w-full h-[20%] text-3xl text-center text-slate-900 font-semibold ">
+              Frontend
+            </div>
+            <div className="w-full h-[80%] flex flex-col justify-center  items-start pl-12 gap-y-4">
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-orange-500 w-8 h-8 justify-center items-center"><FaHtml5 className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono">Html</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-blue-500 w-8 h-8 justify-center items-center"><FaCss3 className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">Css</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-yellow-500 w-8 h-8 justify-center items-center"><BiLogoJavascript className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">javascript</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-blue-600 w-8 h-8 justify-center items-center"><BiLogoReact className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">ReactJs</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-cyan-500 w-8 h-8 justify-center items-center"><BiLogoTailwindCss className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">Tailwindcss</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center items-center w-[25rem] h-[20rem] bg-[#f4f0f0] shadow-xl shadow-slate-300 rounded-sm relative">
+          <img
+            src={Server}
+            className="w-32 h-32 absolute -top-16 bg-black bg-clip-text text-transparent"
+          />
+          <div className="w-full h-[80%] flex flex-col justify-center items-center gap-y-1">
+
+            <div className="w-full h-[20%] text-3xl text-center text-slate-900 font-semibold ">
+              backend
+            </div>
+            <div className="w-full h-[80%] flex flex-col justify-center  items-start pl-12 gap-y-4">
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-green-900 w-8 h-8 justify-center items-center"><IoLogoNodejs className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono">NodeJs</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-green-900 w-8 h-8 justify-center items-center"><SiExpress className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">ExpressJs</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-green-800 w-8 h-8 justify-center items-center"><BiLogoMongodb className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">MongoDB</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-slate-900 w-8 h-8 justify-center items-center"><SiMongoose className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">Mongoose</p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center items-center w-[25rem] h-[20rem] bg-[#f4f0f0] shadow-xl shadow-slate-300 rounded-sm relative">
+          <img
+            src={Others}
+            className="w-32 h-32 absolute -top-16 "
+          />
+          <div className="w-full h-[80%] flex flex-col justify-center items-center gap-y-2">
+
+            <div className="w-full h-[20%] text-3xl text-center text-slate-900 font-semibold ">
+              others
+            </div>
+            <div className="w-full h-[80%] flex flex-col justify-center  items-start pl-12 gap-y-4">
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-orange-500 w-8 h-8 justify-center items-center"><FaHtml5 className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono">Html</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-blue-500 w-8 h-8 justify-center items-center"><FaCss3 className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">Css</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-yellow-500 w-8 h-8 justify-center items-center"><BiLogoJavascript className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">javascript</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-blue-600 w-8 h-8 justify-center items-center"><BiLogoReact className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">ReactJs</p>
+              </div>
+              <div className=" flex justify-center items-center gap-x-2">
+                <span className="text-xl  text-cyan-500 w-8 h-8 justify-center items-center"><BiLogoTailwindCss className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">Tailwindcss</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=""></div>
+      </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Tech
+export default Tech;

@@ -8,13 +8,16 @@ import { MdSchool } from "react-icons/md";
 const Education = () => {
   return (
     <>
-      <div className="edu w-screen h-76  sm:h-screen flex-col justify-center items-center sm:pl-80" id="education">
+      <div className="edu w-full h-screen flex   flex-col justify-end max-[1100px]:justify-center items-center " id="education">
+        <div className="flex flex-col">
         <p className="education text-3xl flex justify-center items-center">
           Education
         </p>
         <div className="flex justify-center items-center">
           <hr className="w-80 h-1  border-t border-gray-300 my-4"></hr>
         </div>
+        </div>
+        <div className="w-full flex justify-center items-center">
         <VerticalTimeline className="educationLine bg-gray-200 p-6">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -58,6 +61,7 @@ const Education = () => {
             </h4>
           </VerticalTimelineElement>
         </VerticalTimeline>
+      </div>
       </div>
     </>
   );

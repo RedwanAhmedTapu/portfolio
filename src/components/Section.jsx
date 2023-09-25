@@ -1,26 +1,43 @@
 import Typewriter from "typewriter-effect";
+import MyImage from "../imgs/portImg.png";
+// import {RxDragHandleDots1} from "react-icons/rx";
 
 const Section = () => {
-  let comma="'"
+  let comma = "'";
   return (
-    <div className="section sm:p-8 w-screen  sm:h-screen  bg-grey-900 z-100">
-      <div className="text-container absolute -top-96 sm:static  sm:mb-44 sm:pt-20 sm:pl-96 ">
-        <h1 className="text-3xl sm:text-7xl flex gap-5">Hi I{comma}m <h1 className="text-violet-900">Redwan</h1></h1>
-        <h2 className="text-2xl sm:text-5xl font-semibold leading-relaxed">
-        <Typewriter
-          options={{
-            strings: ["Fullstack Developer", "MERN Stack Developer"],
-            autoStart: true,
-            loop: true,
-          }}
-        />
-        </h2>
-      </div>
+    <div className="w-full h-screen max-[925px]:h-full flex max-[900px]:flex-col justify-center items-center    ">
+        <div className="w-[50%] max-[925px]:w-full h-screen flex flex-col justify-center items-start flex-wrap pl-4 gap-y-10 ">
+          <h1 className="text-3xl sm:text-7xl flex gap-5">
+            Hi I{comma}m{" "}
+            <h2 className="bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 bg-clip-text text-transparent">
+              Redwan
+            </h2>
+          </h1>
+          <h2 className="text-2xl sm:text-5xl font-semibold leading-relaxed bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
+            <Typewriter
+              options={{
+                strings: ["Fullstack Developer", "MERN Developer"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h2>
+        <p className="text-xl text-slate-900 font-normal leading-5 flex-wrap">Dedicated and enthusiastic MERN Stack Developer with a passion for creating web applications. Seeking a position to leverage my skills in building user-friendly and efficient websites that deliver value to businesses.</p>
 
-      <div className=" flex justify-center space-x-4 absolute -top-72 left-4  sm:left-96 ">
-        <button className="button w-34 sm:w-80 h-16 sm:h-24  text-2xl font-sans hover:transition-transform hover:bg-cyan-800 hover:transform-gpu transfor hover:scale-105">Hire Me</button>
-       
-      </div>
+        </div>
+        <div className="w-[50%] h-screen max-[925px]:w-full    flex  justify-center items-center max-[925px]:items-start overflow-hidden ">
+          <div
+            className="myImage w-96 h-96 flex justify-center items-center rounded-full bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600"
+            id="imgDiv"
+          >
+            {" "}
+            <img
+              src={MyImage}
+              alt="My Picture"
+              className="w-[80%] h-[80%] bg-transparent rounded-full object-cover overflow-hidden"
+            />
+          </div>
+        </div>
     </div>
   );
 };

@@ -11,17 +11,21 @@ import ScrollToTop from "react-scroll-to-top";
 function App() {
   return (
     <>
-      <Sidebar />
-      <div className="absolute left-0  space-y-28 p-6">
-        <Section className="overflow-y-auto"/>
-        <About className="overflow-y-auto"/>
-        <Education className="overflow-y-auto"/>
+    
+       <Sidebar className="bg-gradient-to-r  from-gray-100 to-gray-300"/>
+       
+        
+       
+        <Section className=""/>
+        <About className=""/>
+        <Education className=""/>
 
         <Tech className="overflow-y-auto"/>
 
-        <Projects className="overflow-y-auto"/>
-      </div>
+        <Projects className=""/>
+      
       <ScrollToTop color="#1e9e9c2" style={{backgroundColor:"blue"}}/>
+      
     </>
   );
 }
