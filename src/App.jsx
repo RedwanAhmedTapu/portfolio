@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Education from "./pages/Education";
 import Tech from "./pages/Tech";
 import Projects from "./pages/Projects";
+import Footer from "./pages/Footer";
 import ScrollToTop from "react-scroll-to-top";
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
         <Tech className="overflow-y-auto"/>
 
         <Projects className=""/>
+        <Footer/>
       
-      <ScrollToTop color="#1e9e9c2" style={{backgroundColor:"blue"}}/>
+      <ScrollToTop color="#fff" style={{backgroundColor:"#1797ca",display:"flex",justifyContent:"center",alignItems:"center"}}/>
       
     </>
   );

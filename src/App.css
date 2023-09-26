@@ -81,6 +81,7 @@ body {
 .sidebar {
   background: #fff;
 }
+
 .span {
   font-size: 1rem;
   color: #ffffff;
@@ -121,7 +122,15 @@ body {
   position: relative;
   transition: background 0.15s ease;
 }
-@media (max-width: 400px) {
-  .about {
+@media (max-width: 450px) {
+  #imgDiv::after {
+    
+    width: 18rem;
+    height: 18rem;
+  }
+  #imgDiv::before {
+    
+    width: 18rem;
+    height: 18rem;
   }
 }

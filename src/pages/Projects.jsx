@@ -6,6 +6,8 @@
 
 // import { CgWebsite } from "react-icons/cg";
 import MyImage from "../imgs/Screenshot 2023-09-22 093513.png";
+import InfinityShop from "../imgs/Screenshot (52).png";
+import Shopup from "../imgs/shopup.png";
 // import  {Link}  from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 
@@ -33,11 +35,10 @@ const Projects = () => {
                 alt=""
               />
               <div className="imagebottomSlide w-full h-0 leading-6 text-violet-50  flex justify-center items-center text-center tracking-tight  absolute  left-0 right-0 bottom-0  z-10 bg-slate-600 opacity-80  transition-all duration-500 ease rounded-t-lg overflow-hidden">
-               <p className="">
-               codecampJR is an innovative online coding learning platform
-                tailored specifically aspiring programmers. Our site offers a
-               </p>
-              
+                <p className="">
+                  codecampJR is an innovative online coding learning platform
+                  tailored specifically aspiring programmers. Our site offers a
+                </p>
               </div>
             </div>
 
@@ -46,17 +47,20 @@ const Projects = () => {
                 codecampJr.
               </h5>
               <div className="w-24 h-8 bg-blue-600 rounded-md text-xl text-white text-center font-medium">
-                <p to="">see live</p>
+                <a href="https://codecampjr.vercel.app">see live</a>
               </div>
 
-              <div className="w-full  h-10 flex justify-center items-center gap-y-4">
+              <a
+                className="w-full  h-10 flex justify-center items-center gap-y-4"
+                href="https://github.com/RedwanAhmedTapu/codecampjr"
+              >
                 <div className="w-10 h-10 text-black">
                   <AiFillGithub className="w-10 h-10 " />
                 </div>
                 <div className="text-xl text-slate-900 font-medium">
                   project github link
                 </div>
-              </div>
+              </a>
               <div className="flex flex-col justify-center items-center gap-y-1">
                 <div className="flex justify-between items-center gap-x-2">
                   <button className="w-24 h-8 bg-slate-300 rounded-sm">
@@ -81,34 +85,38 @@ const Projects = () => {
             <div className="projectImage w-full h-full relative ">
               <img
                 className=" w-full h-full rounded-t-lg object-cover"
-                src={MyImage}
+                src={InfinityShop}
                 alt=""
               />
               <div className="imagebottomSlide w-full h-0 leading-6 text-violet-50  flex justify-center items-center text-center tracking-tight  absolute  left-0 right-0 bottom-0  z-10 bg-slate-600 opacity-80  transition-all duration-500 ease rounded-t-lg overflow-hidden">
-               <p className="">
-               codecampJR is an innovative online coding learning platform
-                tailored specifically aspiring programmers. Our site offers a
-               </p>
-              
+                <p className="">
+                  InfinityShop is your premier online destination for all things
+                  shopping, where the possibilities are endless and your retail
+                  dreams become reality. With a commitment to excellence, we
+                  provide a shopping platform .
+                </p>
               </div>
             </div>
 
             <div className="p-6 w-full h-full flex flex-col justify-center items-center gap-y-1  ">
               <h5 className="mb-2 text-xl font-medium leading-tight text-slate-900  ">
-                codecampJr.
+                infinityShop.
               </h5>
               <div className="w-24 h-8 bg-blue-600 rounded-md text-xl text-white text-center font-medium">
-                <p to="">see live</p>
+                <a href="https://infinityshop.onrender.com">see live</a>
               </div>
 
-              <div className="w-full  h-10 flex justify-center items-center gap-y-4">
+              <a
+                className="w-full  h-10 flex justify-center items-center gap-y-4"
+                href="https://github.com/RedwanAhmedTapu/infinity"
+              >
                 <div className="w-10 h-10 text-black">
                   <AiFillGithub className="w-10 h-10 " />
                 </div>
                 <div className="text-xl text-slate-900 font-medium">
                   project github link
                 </div>
-              </div>
+              </a>
               <div className="flex flex-col justify-center items-center gap-y-1">
                 <div className="flex justify-between items-center gap-x-2">
                   <button className="w-24 h-8 bg-slate-300 rounded-sm">
@@ -133,34 +141,34 @@ const Projects = () => {
             <div className="projectImage w-full h-full relative ">
               <img
                 className=" w-full h-full rounded-t-lg object-cover"
-                src={MyImage}
+                src={Shopup}
                 alt=""
               />
               <div className="imagebottomSlide w-full h-0 leading-6 text-violet-50  flex justify-center items-center text-center tracking-tight  absolute  left-0 right-0 bottom-0  z-10 bg-slate-600 opacity-80  transition-all duration-500 ease rounded-t-lg overflow-hidden">
-               <p className="">
-               codecampJR is an innovative online coding learning platform
-                tailored specifically aspiring programmers. Our site offers a
-               </p>
-              
+                <p className="">
+                  shopup is a e-commerce site from where user can see the
+                  desired products and buy.it’s a site which is for the people
+                  who wants to buy product online.
+                </p>
               </div>
             </div>
 
             <div className="p-6 w-full h-full flex flex-col justify-center items-center gap-y-1  ">
               <h5 className="mb-2 text-xl font-medium leading-tight text-slate-900  ">
-                codecampJr.
+                shopup
               </h5>
               <div className="w-24 h-8 bg-blue-600 rounded-md text-xl text-white text-center font-medium">
-                <p to="">see live</p>
+                <a href="https://shopup-7udl.onrender.com">see live</a>
               </div>
 
-              <div className="w-full  h-10 flex justify-center items-center gap-y-4">
+              <a className="w-full  h-10 flex justify-center items-center gap-y-4" href="https://github.com/RedwanAhmedTapu/shopup">
                 <div className="w-10 h-10 text-black">
                   <AiFillGithub className="w-10 h-10 " />
                 </div>
                 <div className="text-xl text-slate-900 font-medium">
                   project github link
                 </div>
-              </div>
+              </a>
               <div className="flex flex-col justify-center items-center gap-y-1">
                 <div className="flex justify-between items-center gap-x-2">
                   <button className="w-24 h-8 bg-slate-300 rounded-sm">
@@ -181,9 +189,6 @@ const Projects = () => {
               </div>
             </div>
           </div>
-         
-            
-        
         </div>
       </div>
     </>
