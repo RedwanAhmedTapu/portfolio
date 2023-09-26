@@ -9,7 +9,8 @@ import { AiFillGithub } from "react-icons/ai";
 
 import WebIcon from "../imgs/webIcon.svg";
 import Server from "../imgs/server.svg";
-import Others from "../imgs/others.svg"
+import Others from "../imgs/others.svg";
+import Chrome from "../imgs/chrome.png";
 
 const Tech = () => {
   return (
@@ -122,13 +123,10 @@ const Tech = () => {
                 <p className="w-full h-8 text-2xl text-black font-mono ">github</p>
               </div>
               <div className=" flex justify-center items-center gap-x-2">
-                <span className="text-xl  text-blue-600 w-8 h-8 justify-center items-center"><BiLogoReact className="w-8 h-8"/></span>
-                <p className="w-full h-8 text-2xl text-black font-mono ">ReactJs</p>
+                <span className="text-xl   w-8 h-8 justify-center items-center"><img src={Chrome} className="w-8 h-8"/></span>
+                <p className="w-full h-8 text-2xl text-black font-mono ">chrome devloper tool</p>
               </div>
-              <div className=" flex justify-center items-center gap-x-2">
-                <span className="text-xl  text-cyan-500 w-8 h-8 justify-center items-center"><BiLogoTailwindCss className="w-8 h-8"/></span>
-                <p className="w-full h-8 text-2xl text-black font-mono ">Tailwindcss</p>
-              </div>
+           
             </div>
           </div>
         </div>
