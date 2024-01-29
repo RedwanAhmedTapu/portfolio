@@ -7,7 +7,7 @@
 // import { CgWebsite } from "react-icons/cg";
 import MyImage from "../imgs/Screenshot 2023-09-22 093513.png";
 import InfinityShop from "../imgs/Screenshot (52).png";
-import Shopup from "../imgs/shopup.png";
+import Daliamess from "../imgs/dalia-mess-site.png";
 // import  {Link}  from "react-router-dom";
 import { AiFillGithub } from "react-icons/ai";
 
@@ -141,27 +141,33 @@ const Projects = () => {
             <div className="projectImage w-full h-full relative ">
               <img
                 className=" w-full h-full rounded-t-lg object-cover"
-                src={Shopup}
+                src={Daliamess}
                 alt=""
               />
               <div className="imagebottomSlide w-full h-0 leading-6 text-violet-50  flex justify-center items-center text-center tracking-tight  absolute  left-0 right-0 bottom-0  z-10 bg-slate-600 opacity-80  transition-all duration-500 ease rounded-t-lg overflow-hidden">
                 <p className="">
-                  shopup is a e-commerce site from where user can see the
-                  desired products and buy.it’s a site which is for the people
-                  who wants to buy product online.
+                  Dalia Mess is a cutting-edge website designed for the
+                  efficient management of students who receive three meals a
+                  day. This comprehensive platform is tailored to streamline the
+                  entire process of providing food services to students,
+                  ensuring a seamless and organized experience.
                 </p>
               </div>
             </div>
 
             <div className="p-6 w-full h-full flex flex-col justify-center items-center gap-y-1  ">
               <h5 className="mb-2 text-xl font-medium leading-tight text-slate-900  ">
-                shopup
+                dalia-mess-site
               </h5>
               <div className="w-24 h-8 bg-blue-600 rounded-md text-xl text-white text-center font-medium">
-                <a href="https://shopup-7udl.onrender.com">see live</a>
+                <a href="https://dalia-mess-site.vercel.app">see live</a>
               </div>
 
-              <a className="w-full  h-10 flex justify-center items-center gap-y-4" href="https://github.com/RedwanAhmedTapu/shopup">
+              <a
+                className="w-full  h-10 flex justify-center items-center gap-y-4"
+                href="https://github.com/RedwanAhmedTapu/dalia-mess-site"
+                target="-blank"
+              >
                 <div className="w-10 h-10 text-black">
                   <AiFillGithub className="w-10 h-10 " />
                 </div>

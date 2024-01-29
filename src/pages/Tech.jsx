@@ -39,7 +39,7 @@ const Tech = () => {
             <div className="w-full h-[20%] text-3xl text-center text-slate-900 font-semibold ">
               Frontend
             </div>
-            <div className="w-full h-[80%] flex flex-col justify-center  items-start pl-12 gap-y-4">
+            <div className="w-full h-[80%] flex flex-col justify-center  items-start pl-12 gap-y-3">
               <div className=" flex justify-center items-center gap-x-2">
                 <span className="text-xl  text-orange-500 w-8 h-8 justify-center items-center"><FaHtml5 className="w-8 h-8"/></span>
                 <p className="w-full h-8 text-2xl text-black font-mono">Html</p>
