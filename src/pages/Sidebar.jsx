@@ -26,10 +26,10 @@ const Sidebar = () => {
     
       
         <div className="sidebar w-full h-24 fixed z-10 max-[945px]:hidden flex  justify-around  items-center  rounded shadow-sm ">
-          <div className="w-[40%] h-full text-2xl  text-black flex justify-start items-center px-4 font-semibold">
+          <div className="w-[40%] h-full text-3xl  text-black flex justify-start items-center px-6 font-semibold">
             Mern Stack Devloper
           </div>
-          <div className="w-[60%]  h-full flex justify-evenly items-center">
+          <div className="w-[60%]  h-full flex justify-evenly items-center px-6">
             <Link to="about" spy={true} smooth={true} duration={100}>
               <span className="span text-2xl text-gray-900 cursor-pointer">About</span>
             </Link>
