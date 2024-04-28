@@ -25,22 +25,22 @@ const Sidebar = () => {
     <>
     
       
-        <div className="sidebar w-full h-24 fixed z-10 max-[945px]:hidden flex  justify-around  items-center  rounded shadow-sm px-32">
-          <div className="w-[40%] h-full text-2xl text-black flex justify-center items-center font-semibold">
+        <div className="sidebar w-full h-24 fixed z-10 max-[945px]:hidden flex  justify-around  items-center  rounded shadow-sm ">
+          <div className="w-[40%] h-full text-2xl  text-black flex justify-start items-center px-4 font-semibold">
             Mern Stack Devloper
           </div>
-          <div className="w-[60%] h-full flex justify-evenly items-center">
+          <div className="w-[60%]  h-full flex justify-evenly items-center">
             <Link to="about" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl text-gray-900">About</span>
+              <span className="span text-2xl text-gray-900 cursor-pointer">About</span>
             </Link>
             <Link to="education" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl  text-gray-900">Education</span>
+              <span className="span text-2xl  text-gray-900 cursor-pointer">Education</span>
             </Link>
             <Link to="tech" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl  text-gray-900">skills</span>
+              <span className="span text-2xl  text-gray-900 cursor-pointer">skills</span>
             </Link>
             <Link to="project" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl  text-gray-900">Projects</span>
+              <span className="span text-2xl  text-gray-900 cursor-pointer">Projects</span>
             </Link>
           
           </div>
@@ -66,16 +66,16 @@ const Sidebar = () => {
           </div>
           <div className={`${isSidebarOpen?"w-full h-full flex flex-col justify-evenly items-center":"hidden"}`} >
             <Link to="about" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl text-gray-900" onClick={handleSidebarToggle}>About</span>
+              <span className="span text-2xl text-gray-900 cursor-pointer" onClick={handleSidebarToggle}>About</span>
             </Link>
             <Link to="education" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl  text-gray-900" onClick={handleSidebarToggle}>Education</span>
+              <span className="span text-2xl  text-gray-900 cursor-pointer" onClick={handleSidebarToggle}>Education</span>
             </Link>
             <Link to="tech" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl  text-gray-900" onClick={handleSidebarToggle}>skills</span>
+              <span className="span text-2xl  text-gray-900 cursor-pointer" onClick={handleSidebarToggle}>skills</span>
             </Link>
             <Link to="project" spy={true} smooth={true} duration={100}>
-              <span className="span text-2xl  text-gray-900" onClick={handleSidebarToggle}>Projects</span>
+              <span className="span text-2xl  text-gray-900 cursor-pointer" onClick={handleSidebarToggle}>Projects</span>
             </Link>
            
           </div>
