@@ -78,9 +78,10 @@ const Section = () => {
         
         <h1 className="text-3xl sm:text-7xl flex gap-5 text-yellow-50">
           Hi, I'm{" "}
-          <h2 className="bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900 bg-clip-text text-transparent">
-            Redwan
-          </h2>
+          <h2 className="bg-gradient-to-r from-pink-900 via-pink-800 to-pink-900 bg-clip-text text-transparent">
+  Redwan
+</h2>
+
         </h1>
         <h2 className="text-2xl sm:text-5xl font-semibold leading-relaxed bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
           <Typewriter

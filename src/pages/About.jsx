@@ -19,10 +19,10 @@ const About = () => {
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-4xl text-white font-bold max-[545px]:text-2xl">Redwan Ahmed Tapu</h1>
         <p className="text-[#00CF5D] text-4xl text-center max-[545px]:text-2xl">Web Developer</p>
-        <p className="text-3xl max-[545px]:text-xl sm:leading-relaxed text-center bg-gradient-to-r from-gray-700 via-gray-900 to-black bg-clip-text text-white  px-[6.5rem]">
-  Hello! I am a passionate software engineer with expertise in web development.
-  I love building applications that solve real-world problems.
+        <p className="text-xl sm:text-3xl leading-relaxed text-center bg-gradient-to-r from-gray-700 via-gray-900 to-black bg-clip-text text-white px-6 sm:px-12 lg:px-20 xl:px-32">
+  Hello! I am a passionate software engineer with expertise in web development. I love building applications that solve real-world problems.
 </p>
+
 
 
       </div>
