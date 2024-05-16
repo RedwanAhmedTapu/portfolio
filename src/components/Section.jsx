@@ -9,11 +9,13 @@ const Section = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
     const ctx = canvas.getContext('2d');
     const colors = ['#8d0b64', '#00CF5D', '#2c4a82'];
 
     const dots = [];
-    for (let index = 0; index < 50; index++) {
+    for (let index = 0; index < 80; index++) {
       dots.push({
         x: Math.floor(Math.random() * canvas.width),
         y: Math.floor(Math.random() * canvas.height),
@@ -42,7 +44,7 @@ const Section = () => {
 
       dots.forEach(dot => {
         const distance = Math.sqrt((mouse.x - dot.x) ** 2 + (mouse.y - dot.y) ** 2);
-        if (distance < 50) {
+        if (distance < 300) {
           const angle = Math.atan2(dot.y - mouse.y, dot.x - mouse.x);
           const newX = mouse.x + Math.cos(angle) * distance;
           const newY = mouse.y + Math.sin(angle) * distance;
@@ -56,16 +58,22 @@ const Section = () => {
       });
     };
 
+    const handleMouseLeave = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    };
+
     canvas.addEventListener('mousemove', handleMouseMove);
+    canvas.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
       canvas.removeEventListener('mousemove', handleMouseMove);
+      canvas.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 
   return (
     <div className="w-full h-screen max-[925px]:h-full flex max-[900px]:flex-col justify-center items-center relative top-16 px-2 sm:px-24">
-      <canvas ref={canvasRef} id="dotsCanvas" className="absolute bg-transparent w-full h-screen"></canvas>
+      <canvas ref={canvasRef} id="dotsCanvas" className="absolute top-0 left-0 bg-transparent w-[100%] h-[100%]"></canvas>
       <div className="w-[50%] max-[925px]:w-full h-screen flex flex-col justify-center items-start flex-wrap pl-4 gap-y-2">
         
         <h1 className="text-3xl sm:text-7xl flex gap-5 text-yellow-50">
