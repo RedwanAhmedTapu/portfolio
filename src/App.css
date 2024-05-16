@@ -4,8 +4,8 @@ body {
 }
 #imgDiv {
   position: relative;
-  background: linear-gradient(to bottom right, #ff00ff, #00ffff);
-   
+  background: linear-gradient(to bottom right, #00CF5D, #007F3D);
+
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 #imgDiv::after {
@@ -122,6 +122,27 @@ body {
   position: relative;
   transition: background 0.15s ease;
 }
+
+/* design for link in sidebar */
+.link {
+  position: relative;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 2px; /* Adjust thickness as needed */
+  background-color: transparent; /* Initially transparent */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.link:hover::before {
+  background-color: #00CF5D; /* Green color */
+}
+
 @media (max-width: 450px) {
   #imgDiv::after {
     

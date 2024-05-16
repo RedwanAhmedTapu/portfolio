@@ -6,64 +6,49 @@ import "react-vertical-timeline-component/style.min.css";
 import { MdSchool } from "react-icons/md";
 
 const Education = () => {
+  // Define education data
+  const educationData = [
+    {
+      date: "2016 - 2017",
+      title: "SSC",
+      institution: "Ghoraghal Pilot High School, Bangladesh",
+    },
+    {
+      date: "2017 - 2019",
+      title: "HSC",
+      institution: "Narsingdi United College, Bangladesh",
+    },
+    {
+      date: "2020 - present",
+      title: "BSC In CSE",
+      institution: "Faridpur Engineering College (Affiliated to Dhaka University)",
+    },
+  ];
+
   return (
-    <>
-      <div className="edu w-full h-screen flex   flex-col justify-end max-[1100px]:justify-center items-center " id="education">
-        <div className="flex flex-col">
-        <p className="education text-3xl flex justify-center items-center">
-          Education
-        </p>
-        <div className="flex justify-center items-center">
-          <hr className="w-80 h-1  border-t border-gray-300 my-4"></hr>
-        </div>
-        </div>
-        <div className="w-full flex justify-center items-center">
-        <VerticalTimeline className="educationLine bg-gray-200 p-6">
+    <div className="flex justify-center items-center">
+    <div className="edu w-[80%] max-[400px]:w-full h-full flex flex-col justify-center items-center bg-[#1D293A] text-white" id="education">
+      <h2 className="text-3xl text-[#00CF5D] mb-4">Education</h2>
+      <hr className="w-24 h-1 border-t border-gray-300 mb-8"></hr>
+      <VerticalTimeline>
+        {/* Map over educationData array */}
+        {educationData.map((item, index) => (
           <VerticalTimelineElement
+            key={index} // Use index as key (ideally should use unique ID)
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "black" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2016 - 2017"
+            contentStyle={{ background: "#138781", color: "white" }}
+            contentArrowStyle={{ borderRight: "7px solid gray" }}
+            date={item.date}
             iconStyle={{ background: "#138781", color: "#fff" }}
             icon={<MdSchool />}
           >
-            <h3 className="vertical-timeline-element-title text-2xl">SSC</h3>
-            <h4 className="vertical-timeline-element-subtitle font-mono">
-              Ghoraghal Pilot High School,Bangladesh
-            </h4>
+            <h3 className="text-2xl">{item.title}</h3>
+            <h4 className="font-mono">{item.institution}</h4>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "black" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2017 - 2019"
-            iconStyle={{ background: "#138781", color: "#fff" }}
-            icon={<MdSchool />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">HSC</h3>
-            <h4 className="vertical-timeline-element-subtitle font-mono">
-              Narsingdi United College,Bangladesh
-            </h4>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "white", color: "black" }}
-            contentArrowStyle={{ borderRight: "7px solid  gray" }}
-            date="2020 - present"
-            iconStyle={{ background: "#138781", color: "#fff" }}
-            icon={<MdSchool />}
-          >
-            <h3 className="vertical-timeline-element-title text-2xl">
-              BSC In CSE
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle font-mono">
-              Faridpur Engineering College(Affiliated to Dhaka University)
-            </h4>
-          </VerticalTimelineElement>
-        </VerticalTimeline>
-      </div>
-      </div>
-    </>
+        ))}
+      </VerticalTimeline>
+    </div>
+    </div>
   );
 };
 

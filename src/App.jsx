@@ -26,7 +26,7 @@ function App() {
         <Projects className=""/>
         <Footer/>
       
-      <ScrollToTop smooth color="#fff" style={{backgroundColor:"#1797ca",display:"flex",justifyContent:"center",alignItems:"center"}}/>
+      <ScrollToTop smooth color="#fff" style={{backgroundColor:"#00CF5D",display:"flex",justifyContent:"center",alignItems:"center"}}/>
       
     </>
   );

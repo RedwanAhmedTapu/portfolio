@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+body,.sidebar{
+  background-color: #111a28;
+}
+
 /* Section.css */
 .button {
     padding: 10px 20px;
