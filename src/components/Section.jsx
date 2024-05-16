@@ -99,7 +99,7 @@ const Section = () => {
           </a>
 
           <a
-            className="flex gap-x-1 items-center"
+            className="flex gap-x-1 items-center z-10"
             href="https://github.com/RedwanAhmedTapu"
           >
             <div className="w-8 h-8 text-white">
@@ -109,7 +109,7 @@ const Section = () => {
           </a>
         </div>
         <a
-          className="w-44 h-12 flex justify-start items-center  gap-x-2"
+          className="w-44 h-12 z-10 flex justify-start items-center  gap-x-2"
           href="mailto:redwantapu1234@gmail.com"
         >
           <img src={Gmail} className="w-10 h-10" alt="Gmail Logo" />

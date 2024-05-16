@@ -43,7 +43,7 @@ const Sidebar = () => {
       </div>
 
       {isSidebarOpen && (
-        <div className=" fixed min-[945px]:hidden inset-y-0 left-0 w-64 h-screen transition-all duration-500 ease-out flex flex-col justify-between bg-white shadow-lg z-10">
+        <div className=" fixed min-[945px]:hidden inset-y-0 left-0 w-64 h-screen transition-all duration-500 ease-out flex flex-col justify-between bg-white shadow-lg z-20">
           <div className="sidebar w-full h-24 shadow-md flex justify-center items-center text-2xl text-white font-semibold gap-x-8">
             <p>Portfolio</p>
             <div className="w-8 h-8">
