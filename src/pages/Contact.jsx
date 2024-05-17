@@ -1,0 +1,57 @@
+import React from 'react';
+
+const Contact = () => {
+  return (
+    <div className="container mx-auto my-16 px-12 py-4" id="contact">
+      <div className="flex flex-col xl:flex-row gap-[30px]">
+        {/* Form Section */}
+        <div className="xl:w-[54%] order-2 xl:order-none bg-[#1D293A] p-10 rounded-xl">
+          <h3 className="text-4xl text-teal-400 mb-4">Let's work together</h3>
+          <p className="text-white/60 mb-8">
+           Hope you will find me fit for your desired work and your wishes will come true.
+          </p>
+          <form className="flex flex-col gap-6">
+            {/* Input Fields */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Input type="text" placeholder="Firstname" />
+              <Input type="text" placeholder="Lastname" />
+              <Input type="email" placeholder="Email address" />
+              <Input type="tel" placeholder="Phone number" />
+            </div>
+            <div className="mt-6">
+              <textarea
+                className="w-full p-4 rounded-lg bg-[#00e187] text-white placeholder-gray-900"
+                rows="5"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+            <button className="mt-6 px-6 py-3 bg-accent text-white rounded-lg transition-all duration-300 hover:border-2 hover:border-teal-300 ">
+              Send Message
+            </button>
+          </form>
+        </div>
+        {/* Info Section */}
+        <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="text-white">
+            <h4 className="text-3xl mb-4 text-teal-600 font-semibold">Contact Information</h4>
+            <p className="mb-2">Email: redwantapu1234@gmail.com</p>
+            <p className="mb-2">Phone: (+880) 195-195-9919</p>
+            <p>Address: Bacchu Miya Sarak, Chanmari,Faridpur BD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Input = ({ type, placeholder }) => {
+  return (
+    <input
+      type={type}
+      className="p-4 rounded-lg bg-[#194356d9] text-white placeholder-teal-500"
+      placeholder={placeholder}
+    />
+  );
+};
+
+export default Contact;

@@ -12,6 +12,7 @@ const Sidebar = () => {
 
   const sidebarItems = [
     { id: 1, label: "About", to: "about" },
+    { id: 1, label: "Contact", to: "contact" },
     { id: 2, label: "Education", to: "education" },
     { id: 3, label: "Skills", to: "tech" },
     { id: 4, label: "Projects", to: "project" },
@@ -39,7 +40,7 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className={`sidebar w-full h-24 fixed top-0 right-0 left-0 z-10 max-[945px]:hidden sm:flex justify-center items-center rounded shadow-sm transition-all duration-700 ${
+        className={`sidebar w-full h-24 fixed top-0 right-0 left-0 z-20 max-[945px]:hidden sm:flex justify-center items-center rounded shadow-sm transition-all duration-700 ${
           isHeaderSticky ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"
         }`}
       >
@@ -64,7 +65,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className="sidebar w-full h-24 fixed z-10 flex justify-around min-[946px]:hidden items-center rounded shadow-sm">
+      <div className="sidebar w-full h-24 fixed z-20 flex justify-around min-[946px]:hidden items-center rounded shadow-sm">
         <div className="w-44 h-full text-6xl text-[#00CF5D] flex justify-center items-center relative -left-[13%] max-[655px]:-left-[24%] text-start font-semibold">
           R
         </div>
@@ -81,7 +82,7 @@ const Sidebar = () => {
               <AiOutlineClose className="w-8 h-8" onClick={handleSidebarToggle} />
             </div>
           </div>
-          <div className="sidebar w-full h-full flex flex-col justify-evenly items-center">
+          <div className="sidebar  w-full h-full flex flex-col justify-evenly items-center">
             {sortedSidebarItems.map((item) => (
               <Link
                 key={item.id}
