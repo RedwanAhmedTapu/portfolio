@@ -11,8 +11,8 @@ const Section = () => {
     const canvas = canvasRef.current;
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
-    const ctx = canvas.getContext('2d');
-    const colors = ['#8d0b64', '#00CF5D', '#2c4a82'];
+    const ctx = canvas.getContext("2d");
+    const colors = ["#8d0b64", "#00CF5D", "#2c4a82"];
 
     const dots = [];
     for (let index = 0; index < 80; index++) {
@@ -20,12 +20,12 @@ const Section = () => {
         x: Math.floor(Math.random() * canvas.width),
         y: Math.floor(Math.random() * canvas.height),
         size: Math.random() * 2,
-        color: colors[Math.floor(Math.random() * colors.length)]
+        color: colors[Math.floor(Math.random() * colors.length)],
       });
     }
 
     const drawDots = () => {
-      dots.forEach(dot => {
+      dots.forEach((dot) => {
         ctx.fillStyle = dot.color;
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
@@ -39,11 +39,13 @@ const Section = () => {
 
       const mouse = {
         x: event.pageX - canvas.getBoundingClientRect().left,
-        y: event.pageY - canvas.getBoundingClientRect().top
+        y: event.pageY - canvas.getBoundingClientRect().top,
       };
 
-      dots.forEach(dot => {
-        const distance = Math.sqrt((mouse.x - dot.x) ** 2 + (mouse.y - dot.y) ** 2);
+      dots.forEach((dot) => {
+        const distance = Math.sqrt(
+          (mouse.x - dot.x) ** 2 + (mouse.y - dot.y) ** 2
+        );
         if (distance < 300) {
           const angle = Math.atan2(dot.y - mouse.y, dot.x - mouse.x);
           const newX = mouse.x + Math.cos(angle) * distance;
@@ -62,26 +64,28 @@ const Section = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     };
 
-    canvas.addEventListener('mousemove', handleMouseMove);
-    canvas.addEventListener('mouseleave', handleMouseLeave);
+    canvas.addEventListener("mousemove", handleMouseMove);
+    canvas.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      canvas.removeEventListener('mousemove', handleMouseMove);
-      canvas.removeEventListener('mouseleave', handleMouseLeave);
+      canvas.removeEventListener("mousemove", handleMouseMove);
+      canvas.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
   return (
-    <div className="w-full h-screen max-[925px]:h-full flex max-[900px]:flex-col justify-center items-center relative top-16 px-2 sm:px-24">
-      <canvas ref={canvasRef} id="dotsCanvas" className="absolute top-0 left-0 bg-transparent w-[100%] h-[100%]"></canvas>
+    <div className="w-full h-screen max-[925px]:h-full flex max-[900px]:flex-col justify-center items-center relative  px-2 sm:px-24 top-10">
+      <canvas
+        ref={canvasRef}
+        id="dotsCanvas"
+        className="absolute top-0 left-0 bg-transparent w-[100%] h-[100%]"
+      ></canvas>
       <div className="w-[50%] max-[925px]:w-full h-screen flex flex-col justify-center items-start flex-wrap pl-4 gap-y-2">
-        
-        <h1 className="text-3xl sm:text-7xl flex gap-5 text-yellow-50">
+        <h1 className="text-3xl sm:text-5xl flex items-center gap-x-5 text-yellow-50">
           Hi, I'm{" "}
-          <h2 className="bg-gradient-to-r from-pink-900 via-pink-800 to-pink-900 bg-clip-text text-transparent">
-  Redwan
-</h2>
-
+          <h2 className="text-5xl md:text-6xl bg-gradient-to-r from-green-400 via-slate-200 to-green-500 bg-clip-text text-transparent">
+            Redwan
+          </h2>
         </h1>
         <h2 className="text-2xl sm:text-5xl font-semibold leading-relaxed bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
           <Typewriter
@@ -92,7 +96,7 @@ const Section = () => {
             }}
           />
         </h2>
-        <p className="text-xl font-normal leading-7 text-start text-white max-w-lg">
+        <p className="text-[1.1rem] sm:text-xl font-normal leading-7 text-start text-white max-w-lg">
           Dedicated and enthusiastic MERN Stack Developer with a passion for
           creating web applications. Seeking a position to leverage my skills in
           building user-friendly and efficient websites that deliver value to

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isHeaderSticky, setIsHeaderSticky] = useState(false);
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -18,22 +19,39 @@ const Sidebar = () => {
 
   const sortedSidebarItems = sidebarItems.sort((a, b) => a.id - b.id);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 0) {
+        setIsHeaderSticky(false);
+      } else {
+        setIsHeaderSticky(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="sidebar w-full h-24 fixed z-10 max-[945px]:hidden left-24 flex justify-around items-center rounded shadow-sm bg-white">
-        <div className="w-[30%] h-full text-6xl text-[#00CF5D] flex justify-start items-center px-6 font-semibold">
-         Ŕ
+      <div className={`sidebar w-full h-24 absolute top-0 right-0 left-0 z-10 max-[945px]:hidden sm:flex justify-center items-center rounded shadow-sm transition-all duration-700 ${isHeaderSticky ? 'translate-y-0 opacity-100' : '-translate-y-20 opacity-0'}`}>
+        <div className="w-[50%] h-full text-6xl text-[#00CF5D] flex items-center relative left-[5.4rem] px-6 font-semibold">
+          Ŕ
         </div>
-        <div className="w-[70%] h-full flex gap-x-12 justify-center items-center px-6">
+        <div className="w-[50%] h-full flex gap-x-12 justify-center items-center px-6">
           {sortedSidebarItems.map((item) => (
-            <Link key={item.id} to={item.to} spy={true} smooth={true} duration={100} className="link">
+            <Link key={item.id} to={item.to} spy={true} smooth={true} duration={500} className="link">
               <span className="span text-xl text-white cursor-pointer">{item.label}</span>
             </Link>
           ))}
         </div>
       </div>
 
-      <div className="sidebar w-full h-24 fixed z-10 bg-white flex justify-around min-[946px]:hidden items-center rounded shadow-sm">
+      <div className="sidebar w-full h-24 fixed z-10 flex justify-around min-[946px]:hidden items-center rounded shadow-sm">
         <div className="w-44 h-full text-6xl text-[#00CF5D] flex justify-center items-center relative -left-[13%] max-[655px]:-left-[24%] text-start font-semibold">
           R
         </div>
@@ -43,7 +61,7 @@ const Sidebar = () => {
       </div>
 
       {isSidebarOpen && (
-        <div className=" fixed min-[945px]:hidden inset-y-0 left-0 w-64 h-screen transition-all duration-500 ease-out flex flex-col justify-between bg-white shadow-lg z-20">
+        <div className="fixed min-[945px]:hidden inset-y-0 left-0 w-64 h-screen transition-all duration-500 ease-out flex flex-col justify-between bg-white shadow-lg z-20">
           <div className="sidebar w-full h-24 shadow-md flex justify-center items-center text-2xl text-white font-semibold gap-x-8">
             <p>Portfolio</p>
             <div className="w-8 h-8">
@@ -52,7 +70,7 @@ const Sidebar = () => {
           </div>
           <div className="sidebar w-full h-full flex flex-col justify-evenly items-center">
             {sortedSidebarItems.map((item) => (
-              <Link key={item.id} to={item.to} spy={true} smooth={true} duration={100} className="link" onClick={handleSidebarToggle}>
+              <Link key={item.id} to={item.to} spy={true} smooth={true} duration={500} className="link" onClick={handleSidebarToggle}>
                 <span className="span text-xl text-white cursor-pointer">{item.label}</span>
               </Link>
             ))}
