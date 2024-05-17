@@ -6,6 +6,11 @@
 
 body,.sidebar{
   background-color: #111a28;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  
+  font-style: normal;
 }
 
 /* Section.css */

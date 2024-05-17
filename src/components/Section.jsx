@@ -74,20 +74,20 @@ const Section = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen max-[925px]:h-full flex max-[900px]:flex-col justify-center items-center relative  px-2 sm:px-24 top-10">
+    <div className="w-full h-screen max-[925px]:h-full flex max-[900px]:flex-col justify-center items-center relative  px-2 sm:px-24 top-14 sm:top-10">
       <canvas
         ref={canvasRef}
         id="dotsCanvas"
         className="absolute top-0 left-0 bg-transparent w-[100%] h-[100%]"
       ></canvas>
       <div className="w-[50%] max-[925px]:w-full h-screen flex flex-col justify-center items-start flex-wrap pl-4 gap-y-2">
-        <h1 className="text-3xl sm:text-5xl flex items-center gap-x-5 text-yellow-50">
+        <h1 className="text-3xl lg:text-5xl flex items-center gap-x-5 text-yellow-50">
           Hi, I'm{" "}
-          <h2 className="text-5xl md:text-6xl bg-gradient-to-r from-green-400 via-slate-200 to-green-500 bg-clip-text text-transparent">
+          <h2 className="text-5xl lg:text-6xl bg-gradient-to-r from-green-400 via-slate-200 to-green-500 bg-clip-text text-transparent">
             Redwan
           </h2>
         </h1>
-        <h2 className="text-2xl sm:text-5xl font-semibold leading-relaxed bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
+        <h2 className="text-2xl xl:text-5xl font-semibold leading-relaxed bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent">
           <Typewriter
             options={{
               strings: ["Fullstack Developer", "MERN Developer"],
@@ -126,7 +126,7 @@ const Section = () => {
           href="mailto:redwantapu1234@gmail.com"
         >
           <img src={Gmail} className="w-10 h-10" alt="Gmail Logo" />
-          <p className="text-xl text-white font-semibold">Send a mail</p>
+          <p className="text-xl text-white font-semibold"> mail me</p>
         </a>
       </div>
 

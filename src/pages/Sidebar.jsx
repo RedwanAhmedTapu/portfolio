@@ -4,7 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isHeaderSticky, setIsHeaderSticky] = useState(false);
+  const [isHeaderSticky, setIsHeaderSticky] = useState(true);
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -38,14 +38,27 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className={`sidebar w-full h-24 absolute top-0 right-0 left-0 z-10 max-[945px]:hidden sm:flex justify-center items-center rounded shadow-sm transition-all duration-700 ${isHeaderSticky ? 'translate-y-0 opacity-100' : '-translate-y-20 opacity-0'}`}>
+      <div
+        className={`sidebar w-full h-24 fixed top-0 right-0 left-0 z-10 max-[945px]:hidden sm:flex justify-center items-center rounded shadow-sm transition-all duration-700 ${
+          isHeaderSticky ? "translate-y-0 opacity-100" : "-translate-y-20 opacity-0"
+        }`}
+      >
         <div className="w-[50%] h-full text-6xl text-[#00CF5D] flex items-center relative left-[5.4rem] px-6 font-semibold">
           Ŕ
         </div>
         <div className="w-[50%] h-full flex gap-x-12 justify-center items-center px-6">
           {sortedSidebarItems.map((item) => (
-            <Link key={item.id} to={item.to} spy={true} smooth={true} duration={500} className="link">
-              <span className="span text-xl text-white cursor-pointer">{item.label}</span>
+            <Link
+              key={item.id}
+              to={item.to}
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="link"
+            >
+              <span className="span text-xl text-white cursor-pointer">
+                {item.label}
+              </span>
             </Link>
           ))}
         </div>
@@ -70,8 +83,18 @@ const Sidebar = () => {
           </div>
           <div className="sidebar w-full h-full flex flex-col justify-evenly items-center">
             {sortedSidebarItems.map((item) => (
-              <Link key={item.id} to={item.to} spy={true} smooth={true} duration={500} className="link" onClick={handleSidebarToggle}>
-                <span className="span text-xl text-white cursor-pointer">{item.label}</span>
+              <Link
+                key={item.id}
+                to={item.to}
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="link"
+                onClick={handleSidebarToggle}
+              >
+                <span className="span text-xl text-white cursor-pointer">
+                  {item.label}
+                </span>
               </Link>
             ))}
           </div>
