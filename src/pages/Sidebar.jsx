@@ -12,10 +12,10 @@ const Sidebar = () => {
 
   const sidebarItems = [
     { id: 1, label: "About", to: "about" },
-    { id: 1, label: "Contact", to: "contact" },
-    { id: 2, label: "Education", to: "education" },
-    { id: 3, label: "Skills", to: "tech" },
-    { id: 4, label: "Projects", to: "project" },
+    { id: 2, label: "Contact", to: "contact" },
+    { id: 3, label: "Education", to: "education" },
+    { id: 4, label: "Skills", to: "tech" },
+    { id: 5, label: "Projects", to: "project" },
   ];
 
   const sortedSidebarItems = sidebarItems.sort((a, b) => a.id - b.id);
