@@ -23,7 +23,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_eyarg7s', 'template_cv2idtc', e.target, 'lqnLeIzEa8rcAwSA8')
+    emailjs.sendForm(process.env.SERVICEID, process.env.TEMPLATEID, e.target, process.env.PUBLICID)
       .then((result) => {
         toast.success('Message Sent!', {
           position: "top-right",
