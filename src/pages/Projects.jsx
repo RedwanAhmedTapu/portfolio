@@ -70,7 +70,7 @@ const Projects = () => {
                 <h5 className="mb-2 text-xl font-medium leading-tight text-white">
                   {project.name}
                 </h5>
-                <div className="w-24 h-8 bg-blue-600 rounded-md text-xl text-white text-center font-medium">
+                <div className="w-24 h-8 bg-blue-600 rounded-md text-[1rem] text-white flex justify-center items-center text-center font-medium">
                   <a
                     href={project.liveLink}
                     target="_blank"
