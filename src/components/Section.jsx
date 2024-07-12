@@ -106,7 +106,7 @@ const Section = () => {
         <div className="w-72 h-20 flex justify-start items-center gap-x-8">
           <a
             className="w-28 h-12 z-10 text-white bg-gradient-to-br from-green-500 to-green-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            href="https://drive.google.com/file/d/1R2j0plrL3wjiIn2w2rcngYMZrZZVdIRn/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1aDj9oaWc6w53bdl3D1www3esGpDplmrg/view?usp=sharing" target="blank"
           >
             Resume
           </a>

@@ -2,6 +2,7 @@ import { AiFillGithub } from "react-icons/ai";
 import MyImage from "../imgs/Screenshot 2023-09-22 093513.png";
 import InfinityShop from "../imgs/Screenshot (52).png";
 import Daliamess from "../imgs/dalia-mess-site.png";
+import Tutorcamp from "../imgs/tutorcamp.png";
 
 const projectsData = [
   {
@@ -14,14 +15,23 @@ const projectsData = [
     technologies: ["NextJs", "TailwindCss", "ExpressJs", "MongoDB"],
   },
   {
-    name: "infinityShop.",
-    imageSrc: InfinityShop,
-    liveLink: "https://infinityshop.onrender.com",
-    githubLink: "https://github.com/RedwanAhmedTapu/infinity",
+    name: "Tutorcamp.",
+    imageSrc: Tutorcamp,
+    liveLink: "https://tutorcamp.vercel.app",
+    githubLink: "https://github.com/RedwanAhmedTapu/tutorcamp",
     description:
-      "InfinityShop is your premier online destination for all things shopping, where the possibilities are endless and your retail dreams become reality. With a commitment to excellence, we provide a shopping platform.",
-    technologies: ["NextJs", "TailwindCss", "ExpressJs", "MongoDB"],
+      "TutorCamp is a platform designed to facilitate connections between teachers and students. It allows for live video calls,messaging, topic reading, and question answering.",
+    technologies: ["ReactJs+Vite", "TailwindCss", "ExpressJs", "MongoDB"],
   },
+  // {
+  //   name: "infinityShop.",
+  //   imageSrc: InfinityShop,
+  //   liveLink: "https://infinityshop.onrender.com",
+  //   githubLink: "https://github.com/RedwanAhmedTapu/infinity",
+  //   description:
+  //     "InfinityShop is your premier online destination for all things shopping, where the possibilities are endless and your retail dreams become reality. With a commitment to excellence, we provide a shopping platform.",
+  //   technologies: ["ReactJs+Vite", "TailwindCss", "ExpressJs", "MongoDB"],
+  // },
   {
     name: "dalia-mess-site",
     imageSrc: Daliamess,
@@ -29,7 +39,7 @@ const projectsData = [
     githubLink: "https://github.com/RedwanAhmedTapu/dalia-mess-site",
     description:
       "Dalia Mess is a cutting-edge website designed for the efficient management of students who receive three meals a day. This comprehensive platform is tailored to streamline the entire process of providing food services to students, ensuring a seamless and organized experience.",
-    technologies: ["NextJs", "TailwindCss", "ExpressJs", "MongoDB"],
+    technologies: ["ReactJs+Vite", "TailwindCss", "ExpressJs", "MongoDB"],
   },
 ];
 
@@ -48,7 +58,7 @@ const Projects = () => {
             <hr className="w-80 h-1 border-t border-gray-300 my-4"></hr>
           </div>
         </div>
-        <div className="w-full flex max-[1100px]:flex-wrap max-[1100px]:gap-y-12 justify-center items-center gap-x-8">
+        <div className="w-full flex flex-wrap max-[1100px]:gap-y-12 justify-center items-center  gap-x-8">
           {projectsData.map((project, index) => (
             <div
               key={index}
@@ -62,7 +72,9 @@ const Projects = () => {
                 />
                 <div className="imagebottomSlide w-full h-0 hover:h-full leading-6 text-violet-50 flex justify-center items-center text-center tracking-tight absolute left-0 right-0 bottom-0 z-10 bg-slate-600 opacity-80 transition-all duration-500 ease rounded-t-lg overflow-hidden">
                   <div className="w-full h-full p-6 border flex justify-center items-center border-gray-200 rounded-lg shadow-md">
-                    <p className="text-gray-50 leading-7">{project.description}</p>
+                    <p className="text-gray-50 leading-7">
+                      {project.description}
+                    </p>
                   </div>
                 </div>
               </div>
