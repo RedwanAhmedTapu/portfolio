@@ -17,7 +17,7 @@ function App() {
       <Sidebar className="bg-gradient-to-r  from-gray-100 to-gray-300" />
 
       <Section className="" />
-      <VanishingInput/>
+      {/* <VanishingInput/> */}
       <About className="" />
 
       <Education className="" />
