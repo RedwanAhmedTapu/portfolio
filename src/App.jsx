@@ -9,7 +9,6 @@ import Tech from "./pages/Tech";
 import Projects from "./pages/Projects";
 import Footer from "./pages/Footer";
 import ScrollToTop from "react-scroll-to-top";
-import VanishingInput from "./pages/VanishingInput";
 
 function App() {
   return (

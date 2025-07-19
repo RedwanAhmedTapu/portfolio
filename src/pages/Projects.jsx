@@ -1,7 +1,6 @@
 import { AiFillGithub } from "react-icons/ai";
 import MyImage from "../imgs/Screenshot 2023-09-22 093513.png";
-import InfinityShop from "../imgs/Screenshot (52).png";
-import Daliamess from "../imgs/dalia-mess-site.png";
+import ProEdge from "../imgs/ProEdgeImg.png"
 import Tutorcamp from "../imgs/tutorcamp.png";
 
 const projectsData = [
@@ -23,23 +22,15 @@ const projectsData = [
       "TutorCamp is a platform designed to facilitate connections between teachers and students. It allows for live video calls,messaging, topic reading, and question answering.",
     technologies: ["ReactJs+Vite", "TailwindCss", "ExpressJs", "MongoDB"],
   },
-  // {
-  //   name: "infinityShop.",
-  //   imageSrc: InfinityShop,
-  //   liveLink: "https://infinityshop.onrender.com",
-  //   githubLink: "https://github.com/RedwanAhmedTapu/infinity",
-  //   description:
-  //     "InfinityShop is your premier online destination for all things shopping, where the possibilities are endless and your retail dreams become reality. With a commitment to excellence, we provide a shopping platform.",
-  //   technologies: ["ReactJs+Vite", "TailwindCss", "ExpressJs", "MongoDB"],
-  // },
+  
   {
-    name: "dalia-mess-site",
-    imageSrc: Daliamess,
-    liveLink: "https://dalia-mess-site.vercel.app",
-    githubLink: "https://github.com/RedwanAhmedTapu/dalia-mess-site",
+    name: "ProEdge",
+    imageSrc: ProEdge,
+    liveLink: "https://wealthwisemarketingonline.com",
+    githubLink: "https://github.com/BytesBinary/ProEdge",
     description:
-      "Dalia Mess is a cutting-edge website designed for the efficient management of students who receive three meals a day. This comprehensive platform is tailored to streamline the entire process of providing food services to students, ensuring a seamless and organized experience.",
-    technologies: ["ReactJs+Vite", "TailwindCss", "ExpressJs", "MongoDB"],
+      "ProEdge is a modern e-commerce platform specializing in electrical, piping, and industrial products. Built with ReactJS for a fast and responsive frontend, it integrates a headless CMS (Directus) to manage dynamic content efficiently. The site offers a seamless user experience with structured product listings, real-time updates, and scalable architecture suitable for B2B and B2C customers in the engineering and hardware sectors.",
+    technologies: ["ReactJs+Vite", "TailwindCss", "Directus"],
   },
 ];
 
